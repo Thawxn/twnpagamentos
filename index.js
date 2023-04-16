@@ -12,6 +12,37 @@ app.get('/', (req, res) => {
     res.send('Hello Word')
 });
 
+app.get('/pay', async (req, res) => {
+    let id = '' + Date.now();
+    let emailDopagador = 'thawan@gmail.com'
+
+    let dados = {
+        items: [
+            item = {
+                id: id,
+                title: '2x xbox 3x camisas',
+                quantity: 1,
+                currency_id: 'BRL',
+                unit_price: parseFloat(150)
+            }
+        ],
+        payer: {
+            email: emailDopagador
+        },
+        external_reference: id
+    } 
+
+    try{
+        let pagamentos = await MercadoPago.preferences.create(dados);
+        console.log(pagamentos);
+        res.redirect(pagamentos.body.init_point)
+    }catch(err){
+        console.log(err.message)
+    }
+
+    
+})
+
 app.listen(3000, (req, res) => {
     console.log('Aplicação rodando com sucesso!')
 });
