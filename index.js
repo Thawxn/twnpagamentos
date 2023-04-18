@@ -43,6 +43,11 @@ app.get('/pay', async (req, res) => {
     
 })
 
-app.listen(3000, (req, res) => {
+app.post('/not', (req, res) => {
+    console.log(req.query);
+    res.send("ok");
+})
+
+app.listen(80, (req, res) => {
     console.log('Aplicação rodando com sucesso!')
 });
