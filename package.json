@@ -2,5 +2,23 @@
   "dependencies": {
     "express": "^4.18.2",
     "mercadopago": "^1.5.15"
-  }
+  },
+  "name": "mercadopagocomnode",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thawxn/MercadoPagoComNode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thawxn/MercadoPagoComNode/issues"
+  },
+  "homepage": "https://github.com/Thawxn/MercadoPagoComNode#readme"
 }
