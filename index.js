@@ -48,6 +48,8 @@ app.post('/not', (req, res) => {
     res.send("ok");
 })
 
-app.listen(80, (req, res) => {
+const PORT = process.env.PORT || 80;
+
+app.listen(PORT, (req, res) => {
     console.log('Aplicação rodando com sucesso!')
 });
